@@ -7,17 +7,13 @@ Nike website clone for educational purpose
 ## What I used
 ### Backend
 * Express JS -
-MongoDB -
-Passport - 
-Body-parser -
-Express-session -
-Express-flash -
-bcypt.
+MongoDB 
+
 
 
 
 ### Frontend
-* HTML - CSS - Javascript - bootstrap4 - jQuery
+* HTML - CSS - Javascript 
 
 
 
