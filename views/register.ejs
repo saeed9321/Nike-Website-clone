@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
+    <title><%= title %></title>
+</head>
+<body>
+     <!-- Modal HTML -->
+     <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-login">
+            <div class="modal-content">
+                <form action="/" method="POST" class="login-form">
+                    <div class="modal-header">				
+                        <h4 class="modal-title">Login</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">				
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" required="required" name="email">
+                        </div>
+                        <div class="form-group">
+                            <div class="clearfix">
+                                <label>Password</label>
+                                <a href="#" class="pull-right text-muted"><small>Forgot?</small></a>
+                            </div>
+                            
+                            <input type="password" class="form-control" required="required" name="password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <label class="checkbox-inline pull-left"><input type="checkbox"> Remember me</label>
+                        <input type="submit" class="btn btn-secondary pull-right" value="Login">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('partials/header.ejs') %>
+</div> <!-- I cannot explain why this closing div is here but it's important -->
+    <div class="login text-center pt-3">
+    <img src="static/logo2.png" alt="" class="logo">
+    <h2>Join us NOW!</h2>
+    <form action="" method="POST">
+        <input type="email" required="required" name="email" maxlength="60" placeholder="Email Address"><br>
+        <input type="password" required="required" name="password" minlength="6"  maxlength="40" placeholder="Password"><br>
+        <input type="text" required="required" name="fname" maxlength="30" placeholder="First Name"><br>
+        <input type="text" required="required" name="lname"  maxlength="30" placeholder="Last Name"><br>
+        <input type="checkbox" required="required" name="check">
+        <label for="check">Agree Terms and Conditions</label><br>
+        <button type="submit">Register</button>
+    </form>
+    <h6>Already have an account, <a href="#myModal" class="trigger-btn" data-toggle="modal">Login here</a></h6>
+  </div>
+  <%- include('partials/footer.ejs') %>
+  <script src="static/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+</body>
+</html>
